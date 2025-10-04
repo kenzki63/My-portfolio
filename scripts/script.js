@@ -284,6 +284,54 @@ window.addEventListener('resize', () => {
     });
   });
 
+  // Mobile-specific fixes
+function initMobileFixes() {
+  const isMobile = window.innerWidth < 768;
+  
+  if (isMobile) {
+    // Remove cursor elements
+    const cursor = document.getElementById('cursor');
+    const ripple = document.getElementById('cursorRipple');
+    if (cursor) cursor.style.display = 'none';
+    if (ripple) ripple.style.display = 'none';
+    
+    // Restore default cursor
+    document.body.style.cursor = 'auto';
+    
+    // Add mobile-specific class
+    document.body.classList.add('mobile-device');
+    
+    // Simplify animations for mobile
+    gsap.registerEffect({
+      name: "mobileReveal",
+      effect: (targets, config) => {
+        return gsap.fromTo(targets, 
+          { y: 20, autoAlpha: 0 },
+          { y: 0, autoAlpha: 1, duration: 0.6, ease: "power2.out" }
+        );
+      },
+      defaults: { duration: 0.6 }
+    });
+  }
+}
+
+// Initialize mobile fixes when DOM loads
+document.addEventListener('DOMContentLoaded', initMobileFixes);
+window.addEventListener('resize', initMobileFixes);
+
+// Touch-friendly hover alternatives
+document.querySelectorAll('.hover-target').forEach(el => {
+  el.addEventListener('touchstart', function() {
+    this.classList.add('touch-active');
+  });
+  
+  el.addEventListener('touchend', function() {
+    setTimeout(() => {
+      this.classList.remove('touch-active');
+    }, 150);
+  });
+});
+
   // Footer year
   document.getElementById('year').textContent = new Date().getFullYear();
 
