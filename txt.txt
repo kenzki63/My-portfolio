@@ -1,0 +1,491 @@
+# /index.html
+```html
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Oyeyinka Enoch — Portfolio</title>
+  <meta name="description" content="Oyeyinka Enoch — Frontend & Pygame developer" />
+  <link rel="stylesheet" href="styles/style.css">
+  <!-- GSAP CDN -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+</head>
+<body>
+  <!-- Animated background blobs -->
+  <div id="bg">
+    <div class="bg-blob b1"></div>
+    <div class="bg-blob b2"></div>
+    <div class="bg-blob b3"></div>
+  </div>
+
+  <!-- Custom cursor (replaces default) -->
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-ripple" id="cursorRipple"></div>
+
+  <header class="site-header">
+    <nav class="nav">
+      <a href="#hero" class="nav-link">Home</a>
+      <a href="#about" class="nav-link">About</a>
+      <a href="#projects" class="nav-link">Projects</a>
+      <a href="#skills" class="nav-link">Skills</a>
+      <a href="#contact" class="nav-link">Contact</a>
+      <a href="assets/Resume.docx" download class="btn resume-btn">Resume</a>
+    </nav>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section id="hero" class="section hero">
+      <div class="container">
+        <div class="hero-inner">
+          <div class="hero-text">
+            <h1 class="reveal section-title">Oyeyinka <span class="accent">Enoch</span></h1>
+            <p class="sub reveal">Frontend Developer &amp; Pygame Developer</p>
+            <p class="tagline reveal">Building Web Experiences and Pygame Projects</p>
+            <div class="hero-cta">
+              <a href="#projects" class="btn hover-target">View Projects</a>
+              <a href="#contact" class="btn outline hover-target">Contact</a>
+            </div>
+          </div>
+          <div class="hero-image floating" data-parallax="0.02">
+            <img src="assets/images/profile-placeholder.jpg" alt="Oyeyinka Enoch Profile">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="section about">
+      <div class="container">
+        <h2 class="reveal section-title">About Me</h2>
+        <div class="about-grid">
+          <div class="about-text reveal">
+            <p>I’m Oyeyinka Enoch, a frontend developer and Pygame developer with a passion for building clean, interactive digital experiences. I enjoy turning ideas into functional interfaces and creating engaging projects through code. Whether it’s a user-focused website or a game prototype, I approach every project with creativity, clarity, and attention to detail.</p>
+          </div>
+          <div class="about-photo floating" data-parallax="0.03">
+            <img src="assets/images/profile-placeholder.jpg" alt="profile">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects" class="section projects">
+      <div class="container">
+        <h2 class="reveal section-title">Projects</h2>
+
+        <div class="projects-grid">
+          <!-- Emotion Aware Journal -->
+          <article class="project-card reveal hover-target">
+            <div class="project-media">
+              <img src="assets/images/Emotion.png" alt="Emotion Journal" class="hover-3d">
+            </div>
+            <div class="project-body">
+              <h3 class="proj-title">Emotion Aware Daily Journal</h3>
+              <p>AI-powered journal web app that analyzes user emotions and suggests coping methods to help manage negative feelings. I built the full frontend and integrated it with a Python backend.</p>
+              <p class="tech">HTML • CSS • JavaScript • Python</p>
+              <div class="project-links">
+                <a href="https://emotion-journal-1.onrender.com/" target="_blank" rel="noopener" class="hover-target">Live</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Portfolio website -->
+          <article class="project-card reveal hover-target">
+            <div class="project-media">
+              <img src="assets/images/Portfolio.png" alt="Portfolio" class="hover-3d">
+            </div>
+            <div class="project-body">
+              <h3 class="proj-title">Portfolio Website</h3>
+              <p>A static portfolio built with HTML, CSS and JavaScript showcasing projects and personal information.</p>
+              <p class="tech">HTML • CSS • JavaScript</p>
+              <div class="project-links">
+                <a href="https://replicated-portfolio.netlify.app/" target="_blank" rel="noopener" class="hover-target">Live</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Language AI website -->
+          <article class="project-card reveal hover-target">
+            <div class="project-media">
+              <img src="assets/images/Language.png" alt="Language AI" class="hover-3d">
+            </div>
+            <div class="project-body">
+              <h3 class="proj-title">Language AI Website</h3>
+              <p>Static informational site demonstrating AI language features and UI concepts.</p>
+              <p class="tech">HTML • CSS • JavaScript</p>
+              <div class="project-links">
+                <a href="https://delightful-sable-f5b80d.netlify.app/" target="_blank" rel="noopener" class="hover-target">Live</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Pygame projects -->
+          <article class="project-card reveal hover-target">
+            <div class="project-media">
+              <img src="assets/images/Pac-man.png" alt="Pacman" class="hover-3d">
+            </div>
+            <div class="project-body">
+              <h3 class="proj-title">Pacman (Pygame)</h3>
+              <p>Classic arcade-style Pacman clone built using Pygame. Features include ghost AI, multiple levels, and collectible pellets. Built as a Pygame prototype for quick gameplay iterations.</p>
+              <p class="tech">Python • Pygame</p>
+            </div>
+          </article>
+
+          <article class="project-card reveal hover-target">
+            <div class="project-media">
+              <img src="assets/images/Snake.png" alt="Snake" class="hover-3d">
+            </div>
+            <div class="project-body">
+              <h3 class="proj-title">Snake (Pygame)</h3>
+              <p>A modern take on the classic Snake game with smooth controls, score tracking, and incremental difficulty. Implemented with Pygame to learn collision handling and game loops.</p>
+              <p class="tech">Python • Pygame</p>
+            </div>
+          </article>
+
+          <article class="project-card reveal hover-target">
+            <div class="project-media">
+              <img src="assets/images/Packour.png" alt="Parkour" class="hover-3d">
+            </div>
+            <div class="project-body">
+              <h3 class="proj-title">Parkour (Endless Runner)</h3>
+              <p>An endless parkour-style runner where players collect coins and jump across platforms. Limited coins, increasing speed, and procedural platform placement make each run unique.</p>
+              <p class="tech">Python • Pygame</p>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section id="skills" class="section skills">
+      <div class="container">
+        <h2 class="reveal section-title">Skills &amp; Tools</h2>
+        <div class="skills-grid reveal">
+          <div class="skill-group hover-target">
+            <h4>Languages</h4>
+            <ul>
+              <li>HTML</li>
+              <li>CSS</li>
+              <li>JavaScript</li>
+              <li>Python</li>
+            </ul>
+          </div>
+          <div class="skill-group hover-target">
+            <h4>Libraries / Frameworks</h4>
+            <ul>
+              <li>React</li>
+              <li>Pygame</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="section contact">
+      <div class="container">
+        <h2 class="reveal section-title">Get in touch</h2>
+        <div class="contact-grid">
+          <div class="contact-card reveal hover-target">
+            <h3>Email</h3>
+            <p><a href="mailto:enochdami1@gmail.com">enochdami1@gmail.com</a></p>
+            <h3>Phone</h3>
+            <p><a href="tel:+2348143962419">(+234) 814 396 2419</a></p>
+            <h3>GitHub</h3>
+            <p><a href="https://github.com/kenzki63" target="_blank" rel="noopener">github.com/kenzki63</a></p>
+          </div>
+          <form name="contact" method="POST" class= "contact-form" data-netlify="true" netlify-honeypot="bot-field"><input type="hidden" name="form-name" value="contact">
+            <label>
+              <span>Your name</span>
+              <input type="text" name="name" required>
+            </label>
+            <label>
+              <span>Your email</span>
+              <input type="email" name="email" required>
+            </label>
+            <label>
+              <span>Message</span>
+              <textarea name="message" rows="5" required></textarea>
+            </label>
+            <button class="btn hover-target" type="submit">Send message</button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="container">
+        <p>© <span id="year"></span> Oyeyinka Enoch — Built with care.</p>
+      </div>
+    </footer>
+  </main>
+
+  <script defer src="scripts/script.js"></script>
+</body>
+</html>
+```
+
+# /styles/style.css
+```css
+/* Base styles and variables */
+:root{
+  --bg:#050406; /* near-black */
+  --accent:#f59e2e; /* gold/orange */
+  --muted:#9b9b9b;
+  --glass: rgba(255,255,255,0.03);
+  --card: rgba(255,255,255,0.04);
+  --maxw:1200px;
+}
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  background:var(--bg);
+  color:#e6e6e6;
+  font-family:Inter, ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+  overflow-x:hidden;
+  cursor:none; /* hide default cursor */
+}
+a{color:inherit}
+.container{max-width:var(--maxw);margin:0 auto;padding:48px 20px}
+.section{padding:80px 0;position:relative;z-index:2}
+.section-title{font-size:30px;margin:0 0 18px;color:var(--accent);}
+
+/* Header */
+.site-header{position:fixed;top:12px;left:0;width:100%;z-index:90;padding:6px 0}
+.nav{display:flex;gap:18px;align-items:center;justify-content:center}
+.nav a{color:var(--muted);text-decoration:none;padding:10px 12px;border-radius:10px;transition:transform .25s, color .25s}
+.nav a:hover{color:var(--accent);transform:translateY(-6px)}
+.btn{background:var(--accent);color:#050406;padding:10px 14px;border-radius:12px;text-decoration:none;font-weight:700;display:inline-block}
+.btn.outline{background:transparent;border:1px solid var(--accent);color:var(--accent)}
+.resume-btn{margin-left:12px}
+
+/* Hero */
+.hero-inner{display:flex;gap:40px;align-items:center;justify-content:space-between}
+.hero-text{flex:1}
+.hero-text h1{font-size:48px;margin:0 0 10px}
+.sub{margin:0 0 8px;color:var(--muted)}
+.tagline{margin:0 0 18px}
+.hero-image img{width:220px;height:220px;border-radius:14px;object-fit:cover;border:2px solid rgba(255,255,255,0.06)}
+
+/* About */
+.about-grid{display:flex;gap:24px;align-items:center}
+.about-photo img{width:220px;border-radius:12px}
+
+/* Projects grid */
+.projects-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px}
+.project-card{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));padding:14px;border-radius:14px;backdrop-filter:blur(6px);transition:transform .45s cubic-bezier(.2,.9,.3,1), box-shadow .25s;transform-style:preserve-3d}
+.project-card:hover{transform:translateY(-12px) rotateX(2deg);box-shadow:0 20px 40px rgba(0,0,0,0.6)}
+.project-media img{width:100%;height:160px;object-fit:cover;border-radius:8px;display:block;transform-origin:center center}
+.project-body h3{margin:12px 0 6px}
+.tech{color:var(--muted);font-size:13px}
+.project-links a{color:var(--accent);text-decoration:none;font-weight:600}
+
+/* Hover-3d: images and elements that get a 3D float on hover */
+.hover-3d{transition:transform .35s cubic-bezier(.23,1,.32,1), box-shadow .35s}
+.hover-3d:hover{transform:translateY(-10px) scale(1.02) translateZ(10px)}
+
+/* Skills */
+.skills-grid{display:flex;gap:24px;flex-wrap:wrap}
+.skill-group{background:var(--glass);padding:18px;border-radius:12px;transition:transform .3s}
+.skill-group:hover{transform:translateY(-8px)}
+.skill-group h4{margin:0 0 8px;color:var(--accent)}
+
+/* Contact */
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.contact-card{background:var(--card);padding:18px;border-radius:12px}
+.contact-form label{display:block;margin-bottom:10px}
+.contact-form input,.contact-form textarea{width:100%;padding:10px;background:transparent;border:1px solid rgba(255,255,255,0.06);color:inherit;border-radius:8px}
+
+/* Footer */
+.footer{padding:30px 0;text-align:center;color:var(--muted)}
+
+/* Animated background blobs */
+#bg{position:fixed;inset:0;z-index:0;pointer-events:none}
+.bg-blob{position:absolute;filter:blur(48px);opacity:0.95;mix-blend-mode:screen}
+.bg-blob.b1{width:420px;height:420px;background:radial-gradient(circle at 30% 30%, var(--accent), transparent 40%);left:-140px;top:-80px;animation:move1 13s linear infinite}
+.bg-blob.b2{width:560px;height:560px;background:radial-gradient(circle at 60% 40%, rgba(255,150,60,0.95), transparent 35%);right:-180px;bottom:-140px;animation:move2 15s linear infinite}
+.bg-blob.b3{width:320px;height:320px;background:radial-gradient(circle at 50% 50%, rgba(255,180,110,0.9), transparent 40%);left:60%;top:18%;animation:move3 17s linear infinite}
+@keyframes move1{0%{transform:translateY(0) translateX(0)}50%{transform:translateY(50px) translateX(40px)}100%{transform:translateY(0) translateX(0)}}
+@keyframes move2{0%{transform:translateY(0) translateX(0)}50%{transform:translateY(-60px) translateX(-30px)}100%{transform:translateY(0) translateX(0)}}
+@keyframes move3{0%{transform:translateY(0)}50%{transform:translateY(35px)}100%{transform:translateY(0)}}
+
+/* Floating micro animation */
+.floating{animation:float 6s ease-in-out infinite}
+@keyframes float{0%{transform:translateY(0)}50%{transform:translateY(-10px)}100%{transform:translateY(0)}}
+
+/* Reveal base: invisible until GSAP reveals them */
+.reveal{opacity:0;transform:translateY(18px)}
+
+/* Custom cursor styles */
+.cursor{position:fixed;left:0;top:0;width:12px;height:12px;border-radius:50%;transform:translate(-50%,-50%);pointer-events:none;z-index:9999;mix-blend-mode:screen;background:linear-gradient(180deg,#fff, var(--accent));box-shadow:0 0 18px rgba(245,158,46,0.85);transition:transform .18s ease}
+.cursor-ripple{position:fixed;left:0;top:0;width:42px;height:42px;border-radius:50%;transform:translate(-50%,-50%) scale(1);pointer-events:none;z-index:9998;border:2px solid rgba(245,158,46,0.35);opacity:0}
+.cursor--hidden{opacity:0}
+
+/* Hover state for interactive elements - small glow */
+.hover-target:hover .cursor, .hover-target:focus .cursor{transform:translate(-50%,-50%) scale(1.5)}
+
+/* Text selection pulse helper */
+.cursor-pulse{animation:cursorPulse .65s ease-out}
+@keyframes cursorPulse{0%{transform:translate(-50%,-50%) scale(1)}40%{transform:translate(-50%,-50%) scale(1.8)}100%{transform:translate(-50%,-50%) scale(1)}}
+
+/* Small utilities */
+.hover-target{cursor:none}
+
+/* Responsive tweaks */
+@media (max-width:900px){
+  .hero-inner{flex-direction:column-reverse;align-items:center}
+  .contact-grid{grid-template-columns:1fr}
+}
+```
+
+# /scripts/script.js
+```javascript
+// Upgraded JS: GSAP powered reveals, cursor interactions, hover 3D, parallax, selection pulse
+(() => {
+  // GSAP setup
+  gsap.registerPlugin(ScrollTrigger);
+
+  // Basic DOM refs
+  const cursor = document.getElementById('cursor');
+  const ripple = document.getElementById('cursorRipple');
+  const hoverTargets = document.querySelectorAll('.hover-target, .nav-link, .btn, .project-card, .skill-group, .project-media img, .contact-card');
+
+  // initial mouse position
+  let mouse = {x: window.innerWidth/2, y: window.innerHeight/2};
+  let pos = {x: mouse.x, y: mouse.y};
+
+  // Smooth cursor motion using GSAP ticker
+  function moveCursor(){
+    pos.x += (mouse.x - pos.x) * 0.18;
+    pos.y += (mouse.y - pos.y) * 0.18;
+    gsap.set(cursor, {x: pos.x, y: pos.y});
+    gsap.set(ripple, {x: mouse.x, y: mouse.y});
+  }
+  gsap.ticker.add(moveCursor);
+
+  window.addEventListener('mousemove', (e)=>{
+    mouse.x = e.clientX; mouse.y = e.clientY;
+  });
+
+  // click: shrink briefly
+  window.addEventListener('mousedown', ()=>{
+    gsap.to(cursor, {scale:0.5, duration:0.12, ease:'power3.out'});
+    // ripple
+    gsap.fromTo(ripple, {opacity:0.8, scale:0.3}, {opacity:0, scale:1.6, duration:0.7, ease:'power2.out'});
+  });
+  window.addEventListener('mouseup', ()=>{
+    gsap.to(cursor, {scale:1, duration:0.28, ease:'elastic.out(1,0.6)'});
+  });
+
+  // Hover interactions: float-up 3D effect using GSAP on enter/leave
+  hoverTargets.forEach(el=>{
+    el.addEventListener('mouseenter', ()=>{
+      gsap.to(el, {y:-8, z:10, duration:0.38, ease:'power3.out'});
+      gsap.to(cursor, {scale:1.4, duration:0.18});
+    });
+    el.addEventListener('mouseleave', ()=>{
+      gsap.to(el, {y:0, z:0, duration:0.45, ease:'power3.out'});
+      gsap.to(cursor, {scale:1, duration:0.25});
+    });
+  });
+
+  // Reveal animations for all elements with .reveal
+  gsap.utils.toArray('.reveal').forEach(el=>{
+    gsap.fromTo(el, {y:18, autoAlpha:0}, {
+      y:0, autoAlpha:1, duration:0.9, ease:'power2.out',
+      scrollTrigger:{trigger:el, start:'top 85%', toggleActions:'play none none none'}
+    });
+  });
+
+  // Staggered reveal for project cards
+  ScrollTrigger.batch('.projects-grid .project-card', {
+    interval: 0.12,
+    batchMax: 6,
+    onEnter: batch => gsap.to(batch, {y: 0, autoAlpha: 1, stagger: 0.08, duration: 0.8, ease: 'power3.out'}),
+    onLeave: batch => gsap.to(batch, {autoAlpha:0}),
+    start: 'top 85%'
+  });
+
+  // Parallax: elements with data-parallax
+  const parallaxEls = document.querySelectorAll('[data-parallax]');
+  window.addEventListener('scroll', ()=>{
+    parallaxEls.forEach(el=>{
+      const factor = parseFloat(el.dataset.parallax) || 0.02;
+      const offset = window.scrollY * factor;
+      gsap.to(el, {y: offset, duration: 0.6, ease: 'power1.out'});
+    });
+  });
+
+  // Background blob subtle follow on mouse
+  const blobs = document.querySelectorAll('.bg-blob');
+  window.addEventListener('mousemove', (e)=>{
+    const cx = (e.clientX / window.innerWidth - 0.5) * 30;
+    const cy = (e.clientY / window.innerHeight - 0.5) * 30;
+    blobs.forEach((b, i)=>{
+      const depth = (i+1) * 6;
+      gsap.to(b, {x: cx * (i+0.6), y: cy * (i+0.6), duration: 1.2, ease: 'power2.out'});
+    });
+  });
+
+  // Hide cursor on inactivity
+  let idleTimer;
+  function resetIdle(){
+    clearTimeout(idleTimer);
+    gsap.to(cursor, {autoAlpha:1, duration:0.4});
+    idleTimer = setTimeout(()=>gsap.to(cursor, {autoAlpha:0, duration:0.9}), 3000);
+  }
+  window.addEventListener('mousemove', resetIdle);
+  resetIdle();
+
+  // Text selection pulse: listen to selectionchange
+  document.addEventListener('selectionchange', ()=>{
+    const sel = document.getSelection().toString();
+    if(sel && sel.length>0){
+      // pulse cursor
+      gsap.fromTo(cursor, {scale:1}, {scale:1.9, duration:0.28, yoyo:true, repeat:1, ease:'power2.out'});
+    }
+  });
+
+  // Prevent native pointer showing on interactive elements: add style where required
+  document.querySelectorAll('a, button, input, textarea, label').forEach(el=>{
+    el.style.cursor = 'none';
+  });
+
+  // Smooth nav scroll
+  document.querySelectorAll('a[href^="#"]').forEach(a=>{
+    a.addEventListener('click', (e)=>{
+      e.preventDefault();
+      const t = document.querySelector(a.getAttribute('href'));
+      if(!t) return;
+      t.scrollIntoView({behavior:'smooth', block:'start'});
+    });
+  });
+
+  // Footer year
+  document.getElementById('year').textContent = new Date().getFullYear();
+
+  // Accessibility: ensure focus outlines visible for keyboard users
+  document.addEventListener('keydown', (e)=>{
+    if(e.key === 'Tab'){
+      document.documentElement.classList.add('show-focus');
+    }
+  });
+
+})();
+```
+
+# Notes
+- This replacement uses **GSAP + ScrollTrigger** (CDN links included in the HTML). No other external libs.
+- Cursor hides the default pointer and fully replaces it. Interactive elements set `cursor:none` so native pointer doesn't reappear.
+- Hover/float effects are applied via JS for better control and physics-like motion with GSAP.
+- Text selection pulse triggers when a user highlights text.
+- If you want keyboard accessibility improvements (focus styles that work with the custom cursor), I can add explicit focus-visible styles next.
+- If you want the project packed as a ZIP, I can generate that next.
+```

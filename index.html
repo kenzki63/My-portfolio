@@ -1,0 +1,350 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Oyeyinka Enoch — Portfolio</title>
+  <meta name="description" content="Oyeyinka Enoch — Frontend & Pygame developer" />
+  <link rel="stylesheet" href="styles/style.css">
+  <!-- GSAP CDN -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+</head>
+<body>
+  <!-- Loading Screen -->
+  <div id="loading">
+    <div class="loading-spinner"></div>
+  </div>
+
+  <!-- Animated background blobs -->
+  <!-- Animated background blobs -->
+<div id="bg">
+  <div class="bg-blob b1"></div>
+  <div class="bg-blob b2"></div>
+  <div class="bg-blob b3"></div>
+  <div class="bg-blob b4"></div>
+  <div class="bg-blob b5"></div>
+</div>
+
+  <!-- Custom cursor (replaces default) -->
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-ripple" id="cursorRipple"></div>
+
+  <header class="site-header">
+    <nav class="nav">
+      <a href="#hero" class="nav-link">Home</a>
+      <a href="#about" class="nav-link">About</a>
+      <a href="#projects" class="nav-link">Projects</a>
+      <a href="#skills" class="nav-link">Skills</a>
+      <a href="#process" class="nav-link">Process</a>
+      <a href="#testimonials" class="nav-link">Testimonials</a>
+      <a href="#contact" class="nav-link">Contact</a>
+      <a href="assets/Resume.docx" download class="btn resume-btn">Resume</a>
+    </nav>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section id="hero" class="section hero">
+      <div class="container">
+        <div class="hero-inner">
+          <div class="hero-text">
+            <h1 class="reveal section-title">Oyeyinka <span class="accent">Enoch</span></h1>
+            <p class="sub reveal">Frontend Developer &amp; Pygame Developer</p>
+            <p class="tagline reveal">Building Web Experiences and Pygame Projects</p>
+            
+            <!-- Hero Stats -->
+            <div class="hero-stats reveal">
+              <div class="stat">
+                <span class="number">6+</span>
+                <span class="label">Projects</span>
+              </div>
+              <div class="stat">
+                <span class="number">2+</span>
+                <span class="label">Years</span>
+              </div>
+              <div class="stat">
+                <span class="number">100%</span>
+                <span class="label">Satisfaction</span>
+              </div>
+            </div>
+            
+            <div class="hero-cta">
+              <a href="#projects" class="btn hover-target">View Projects</a>
+              <a href="#contact" class="btn outline hover-target">Contact</a>
+            </div>
+          </div>
+          <div class="hero-image floating" data-parallax="0.02">
+            <img src="assets/images/profile-placeholder.jpg" alt="Oyeyinka Enoch Profile">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="section about">
+      <div class="container">
+        <h2 class="reveal section-title">About Me</h2>
+        <div class="about-grid">
+          <div class="about-text reveal">
+            <p>I'm Oyeyinka Enoch, a frontend developer and Pygame developer with a passion for building clean, interactive digital experiences. I enjoy turning ideas into functional interfaces and creating engaging projects through code. Whether it's a user-focused website or a game prototype, I approach every project with creativity, clarity, and attention to detail.</p>
+            
+            <div class="personal-interests reveal">
+              <h4>Beyond Code</h4>
+              <div class="interests">
+                <span class="interest-item">🎮 Gaming</span>
+                <span class="interest-item">🎵 Music</span>
+                <span class="interest-item">📚 Learning</span>
+                <span class="interest-item">🚀 Tech Innovation</span>
+              </div>
+            </div>
+          </div>
+          <div class="about-photo floating" data-parallax="0.03">
+            <img src="assets/images/profile-placeholder.jpg" alt="profile">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects" class="section projects">
+      <div class="container">
+        <h2 class="reveal section-title">Projects</h2>
+
+        <div class="projects-grid">
+          <!-- Emotion Aware Journal -->
+          <article class="project-card reveal hover-target">
+            <div class="project-media">
+              <img src="assets/images/Emotion.png" alt="Emotion Journal" class="hover-3d">
+            </div>
+            <div class="project-body">
+              <h3 class="proj-title">Emotion Aware Daily Journal</h3>
+              <p>AI-powered journal web app that analyzes user emotions and suggests coping methods to help manage negative feelings. I built the full frontend and integrated it with a Python backend.</p>
+              <div class="project-features">
+                <span>✅ Responsive Design</span>
+                <span>⚡ AI Integration</span>
+                <span>🎨 Modern UI</span>
+              </div>
+              <p class="tech">HTML • CSS • JavaScript • Python</p>
+              <div class="project-links">
+                <a href="https://emotion-journal-1.onrender.com/" target="_blank" rel="noopener" class="hover-target">Live</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Portfolio website -->
+          <article class="project-card reveal hover-target">
+            <div class="project-media">
+              <img src="assets/images/Portfolio.png" alt="Portfolio" class="hover-3d">
+            </div>
+            <div class="project-body">
+              <h3 class="proj-title">Portfolio Website</h3>
+              <p>A static portfolio built with HTML, CSS and JavaScript showcasing projects and personal information.</p>
+              <div class="project-features">
+                <span>✅ Responsive</span>
+                <span>⚡ Smooth Animations</span>
+                <span>🎨 Interactive</span>
+              </div>
+              <p class="tech">HTML • CSS • JavaScript</p>
+              <div class="project-links">
+                <a href="https://replicated-portfolio.netlify.app/" target="_blank" rel="noopener" class="hover-target">Live</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Language AI website -->
+          <article class="project-card reveal hover-target">
+            <div class="project-media">
+              <img src="assets/images/Language.png" alt="Language AI" class="hover-3d">
+            </div>
+            <div class="project-body">
+              <h3 class="proj-title">Language AI Website</h3>
+              <p>Static informational site demonstrating AI language features and UI concepts.</p>
+              <div class="project-features">
+                <span>✅ Responsive</span>
+                <span>⚡ Modern Design</span>
+                <span>🎨 Clean UI</span>
+              </div>
+              <p class="tech">HTML • CSS • JavaScript</p>
+              <div class="project-links">
+                <a href="https://delightful-sable-f5b80d.netlify.app/" target="_blank" rel="noopener" class="hover-target">Live</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Pygame projects -->
+          <article class="project-card reveal hover-target">
+            <div class="project-media">
+              <img src="assets/images/Pac-man.png" alt="Pacman" class="hover-3d">
+            </div>
+            <div class="project-body">
+              <h3 class="proj-title">Pacman (Pygame)</h3>
+              <p>Classic arcade-style Pacman clone built using Pygame. Features include ghost AI, multiple levels, and collectible pellets. Built as a Pygame prototype for quick gameplay iterations.</p>
+              <div class="project-features">
+                <span>✅ Ghost AI</span>
+                <span>⚡ Multiple Levels</span>
+                <span>🎮 Smooth Controls</span>
+              </div>
+              <p class="tech">Python • Pygame</p>
+            </div>
+          </article>
+
+          <article class="project-card reveal hover-target">
+            <div class="project-media">
+              <img src="assets/images/Snake.png" alt="Snake" class="hover-3d">
+            </div>
+            <div class="project-body">
+              <h3 class="proj-title">Snake (Pygame)</h3>
+              <p>A modern take on the classic Snake game with smooth controls, score tracking, and incremental difficulty. Implemented with Pygame to learn collision handling and game loops.</p>
+              <div class="project-features">
+                <span>✅ Smooth Controls</span>
+                <span>⚡ Score Tracking</span>
+                <span>🎮 Progressive Difficulty</span>
+              </div>
+              <p class="tech">Python • Pygame</p>
+            </div>
+          </article>
+
+          <article class="project-card reveal hover-target">
+            <div class="project-media">
+              <img src="assets/images/Packour.png" alt="Parkour" class="hover-3d">
+            </div>
+            <div class="project-body">
+              <h3 class="proj-title">Parkour (Endless Runner)</h3>
+              <p>An endless parkour-style runner where players collect coins and jump across platforms. Limited coins, increasing speed, and procedural platform placement make each run unique.</p>
+              <div class="project-features">
+                <span>✅ Procedural Generation</span>
+                <span>⚡ Coin System</span>
+                <span>🎮 Increasing Difficulty</span>
+              </div>
+              <p class="tech">Python • Pygame</p>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section id="skills" class="section skills">
+      <div class="container">
+        <h2 class="reveal section-title">Skills &amp; Tools</h2>
+        <div class="skills-grid reveal">
+          <div class="skill-group hover-target">
+            <h4>Languages</h4>
+            <ul>
+              <li>HTML</li>
+              <li>CSS</li>
+              <li>JavaScript</li>
+              <li>Python</li>
+            </ul>
+          </div>
+          <div class="skill-group hover-target">
+            <h4>Libraries / Frameworks</h4>
+            <ul>
+              <li>React</li>
+              <li>Pygame</li>
+              <li>GSAP</li>
+            </ul>
+          </div>
+          <div class="skill-group hover-target">
+            <h4>Tools &amp; Technologies</h4>
+            <ul>
+              <li>Git & GitHub</li>
+              <li>Netlify</li>
+              <li>Render</li>
+              <li>VS Code</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROCESS -->
+    <section id="process" class="section process">
+      <div class="container">
+        <h2 class="reveal section-title">My Process</h2>
+        <div class="process-steps">
+          <div class="step reveal hover-target">
+            <span class="step-number">01</span>
+            <h4>Plan & Research</h4>
+            <p>Understanding requirements and planning architecture with careful analysis</p>
+          </div>
+          <div class="step reveal hover-target">
+            <span class="step-number">02</span>
+            <h4>Design & Develop</h4>
+            <p>Creating intuitive designs and writing clean, maintainable code</p>
+          </div>
+          <div class="step reveal hover-target">
+            <span class="step-number">03</span>
+            <h4>Test & Deploy</h4>
+            <p>Thorough testing and smooth deployment with ongoing support</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TESTIMONIALS -->
+    <section id="testimonials" class="section testimonials">
+      <div class="container">
+        <h2 class="reveal section-title">What People Say</h2>
+        <div class="testimonials-grid">
+          <div class="testimonial-card reveal hover-target">
+            <div class="quote">"Enoch delivered exceptional work with great attention to detail. His ability to transform ideas into functional, beautiful interfaces is remarkable."</div>
+            <div class="client">- Project Collaborator</div>
+          </div>
+          <div class="testimonial-card reveal hover-target">
+            <div class="quote">"The Pygame projects demonstrate solid understanding of game development principles and clean code architecture. Very impressive work!"</div>
+            <div class="client">- Game Dev Community</div>
+          </div>
+          <div class="testimonial-card reveal hover-target">
+            <div class="quote">"Professional approach to web development with modern techniques. The portfolio itself speaks volumes about the quality of work."</div>
+            <div class="client">- Tech Reviewer</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="section contact">
+      <div class="container">
+        <h2 class="reveal section-title">Get in touch</h2>
+        <div class="contact-grid">
+          <div class="contact-card reveal hover-target">
+            <h3>Email</h3>
+            <p><a href="mailto:enochdami1@gmail.com">enochdami1@gmail.com</a></p>
+            <h3>Phone</h3>
+            <p><a href="tel:+2348143962419">(+234) 814 396 2419</a></p>
+            <h3>GitHub</h3>
+            <p><a href="https://github.com/kenzki63" target="_blank" rel="noopener">github.com/kenzki63</a></p>
+          </div>
+          <form name="contact" method="POST" class="contact-form" data-netlify="true" netlify-honeypot="bot-field">
+            <input type="hidden" name="form-name" value="contact">
+            <label>
+              <span>Your name</span>
+              <input type="text" name="name" required>
+            </label>
+            <label>
+              <span>Your email</span>
+              <input type="email" name="email" required>
+            </label>
+            <label>
+              <span>Message</span>
+              <textarea name="message" rows="5" required></textarea>
+            </label>
+            <button class="btn hover-target" type="submit">Send message</button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="container">
+        <p>© <span id="year"></span> Oyeyinka Enoch — Built with care.</p>
+      </div>
+    </footer>
+  </main>
+
+  <script defer src="scripts/script.js"></script>
+</body>
+</html>
